@@ -16,7 +16,7 @@ function dim(points, dim) {
  *
  * @param {array} a
  * @param {array} b
- * @returns
+ * @returns {number}
  */
 function d(a, b) {
   return Math.sqrt(
@@ -35,7 +35,7 @@ function d(a, b) {
  */
 function timeNormalize(A, B, step = 0.1) {
   /**
-   * Refactor the combine them all
+   * @todo Refactor the combine them all
    */
   const tA = dim(A, 0);
   const tB = dim(B, 0);
@@ -68,6 +68,14 @@ function timeNormalize(A, B, step = 0.1) {
   return { t: steps, A: alpha, B: beta};
 }
 
+/**
+ * Compute distances between points of A and B defined by `alpha(t)` and
+ * `beta(t)`.
+ *
+ * @param {array} A [...[x, y]] positions array
+ * @param {array} B [...[x, y]] positions array
+ * @returns {array}
+ */
 function distances(A, B) {
   const distances = [];
   const len = A.length;
@@ -79,10 +87,24 @@ function distances(A, B) {
   return distances;
 }
 
+/**
+ * Returns the minimal value of distances between points, exact Fréchet distance.
+ *
+ * @param {array} A [...[x, y]] positions array
+ * @param {array} B [...[x, y]] positions array
+ * @returns {array}
+ */
 function min(A, B) {
   return Math.min(...distances(A, B));
 }
 
+/**
+ * Returns the mean value of distances between points.
+ *
+ * @param {array} A [...[x, y]] positions array
+ * @param {array} B [...[x, y]] positions array
+ * @returns {array}
+ */
 function mean(A, B) {
   return _.mean(distances(A, B));
 }
