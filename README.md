@@ -1,6 +1,6 @@
 # Fréchet
 
-[![Build Status](https://travis-ci.org/GillesRasigade/frechet.svg?branch=master)](https://travis-ci.org/GillesRasigade/frechet)
+[![Build Status](https://travis-ci.org/GillesRasigade/frechet.svg?branch=master)](https://travis-ci.org/GillesRasigade/frechet) [![Code Climate](https://codeclimate.com/github/GillesRasigade/pattern/badges/gpa.svg)](https://codeclimate.com/github/GillesRasigade/frechet) [![Test Coverage](https://codeclimate.com/github/GillesRasigade/frechet/badges/coverage.svg)](https://codeclimate.com/github/GillesRasigade/frechet/coverage) [![npm dependencies](https://david-dm.org/GillesRasigade/frechet.svg)](https://david-dm.org/GillesRasigade/frechet.svg)
 
 Computes the [Fréchet distance](https://en.wikipedia.org/wiki/Fr%C3%A9chet_distance)
 for 2 different paths.
