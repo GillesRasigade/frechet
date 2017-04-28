@@ -3,7 +3,7 @@
 Computes the [Fréchet distance](https://en.wikipedia.org/wiki/Fr%C3%A9chet_distance)
 for 2 different paths.
 
-## Time based paths
+## Time based paths
 
 ```js
 /**
