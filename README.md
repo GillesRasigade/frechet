@@ -14,9 +14,9 @@ for 2 different paths.
 const tA = [[0, 0, 0], [0.25, 0, 0.75], [1, 0, 1]];
 const tB = [[0, 0, 0], [0.5, 0, 0.5], [1, 0, 2]];
 
-const normalized = frechet.timeNormalize(tA, tB);
+const { A, B } = frechet.timeNormalize(tA, tB);
 
-const D = frechet.mean(normalized.A, normalized.B);
+const D = frechet.mean(A, B);
 // 0.38787878787878777
 ```
 
