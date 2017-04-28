@@ -1,0 +1,24 @@
+{
+  "name": "frechet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint src",
+    "mocha": "mocha --bail",
+    "coverage": "istanbul cover _mocha --include-all-sources --root ./src",
+    "test": "npm run eslint && npm run coverage",
+    "doc": "jsdoc --configure .jsdoc.json -R README.md ./src"
+  },
+  "author": "Gilles Rasigade",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0"
+  }
+}

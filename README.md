@@ -1,1 +1,1 @@
-# frechet
+# Fréchet
