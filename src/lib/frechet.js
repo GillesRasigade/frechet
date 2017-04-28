@@ -26,6 +26,19 @@ function d(a, b) {
 }
 
 /**
+ * Regress the linear part between (i, t) and (X, T)
+ *
+ * @param {any} i
+ * @param {any} t
+ * @param {any} X
+ * @param {any} T
+ * @returns
+ */
+function regress(i, t, X, T) {
+  return X[i] === X[i - 1] ? X[i] : X[i-1] +(t - T[i-1]) / (T[i] - T[i-1]) * (X[i] - X[i-1]);
+}
+
+/**
  * Normalize a time based array for a given time step
  *
  * @param {array} A
@@ -54,11 +67,11 @@ function timeNormalize(A, B, step = 0.1) {
     const iA = _.findIndex(tA, i => i > t);
     const iB = _.findIndex(tB, i => i > t);
 
-    const xa = xA[iA] === xA[iA - 1] ? xA[iA] : xA[iA-1] +(t - tA[iA-1]) / (tA[iA] - tA[iA-1]) * (xA[iA] - xA[iA-1]);
-    const ya = yA[iA] === yA[iA - 1] ? yA[iA] : yA[iA-1] +(t - tA[iA-1]) / (tA[iA] - tA[iA-1]) * (yA[iA] - yA[iA-1]);
+    const xa = regress(iA, t, xA, tA);
+    const ya = regress(iA, t, yA, tA);
 
-    const xb = xB[iB] === xB[iB - 1] ? xB[iB] : xB[iB-1] +(t - tB[iB-1]) / (tB[iB] - tB[iB-1]) * (xB[iB] - xB[iB-1]);
-    const yb = yB[iB] === yB[iB - 1] ? yB[iB] : yB[iB-1] +(t - tB[iB-1]) / (tB[iB] - tB[iB-1]) * (yB[iB] - yB[iB-1]);
+    const xb = regress(iB, t, xB, tB);
+    const yb = regress(iB, t, yB, tB);
 
     steps.push(t);
     alpha.push([xa, ya]);

@@ -1,5 +1,7 @@
 # Fréchet
 
+[![Build Status](https://travis-ci.org/GillesRasigade/frechet.svg?branch=master)](https://travis-ci.org/GillesRasigade/frechet)
+
 Computes the [Fréchet distance](https://en.wikipedia.org/wiki/Fr%C3%A9chet_distance)
 for 2 different paths.
 
