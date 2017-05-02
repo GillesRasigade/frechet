@@ -1,4 +1,4 @@
-# Fréchet
+# Fréchet (WIP)
 
 [![Build Status](https://travis-ci.org/GillesRasigade/frechet.svg?branch=master)](https://travis-ci.org/GillesRasigade/frechet) [![Code Climate](https://codeclimate.com/github/GillesRasigade/pattern/badges/gpa.svg)](https://codeclimate.com/github/GillesRasigade/frechet) [![Test Coverage](https://codeclimate.com/github/GillesRasigade/frechet/badges/coverage.svg)](https://codeclimate.com/github/GillesRasigade/frechet/coverage) [![npm dependencies](https://david-dm.org/GillesRasigade/frechet.svg)](https://david-dm.org/GillesRasigade/frechet.svg) [![Issue Count](https://codeclimate.com/github/GillesRasigade/frechet/badges/issue_count.svg)](https://codeclimate.com/github/GillesRasigade/frechet)
 
