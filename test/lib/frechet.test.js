@@ -66,8 +66,8 @@ describe('frechet', () => {
 
       const { A, B } = frechet.timeNormalize(tA, tB, 0.5);
 
-      expect(A).to.deep.equal([ [ 0, 0 ], [ 0, 0.8333333333333334 ] ]);
-      expect(B).to.deep.equal([ [ 0, 0 ], [ 0, 0.5 ] ]);
+      expect(A).to.deep.equal([[0, 0], [0, 0.8333333333333334]]);
+      expect(B).to.deep.equal([[0, 0], [0, 0.5]]);
     });
 
     it('normalizes time based array with constant x', () => {
@@ -76,8 +76,8 @@ describe('frechet', () => {
 
       const { A, B } = frechet.timeNormalize(tA, tB, 0.5);
 
-      expect(A).to.deep.equal([ [ 0, 0.75 ], [ 0.3333333333333333, 0.8333333333333334 ] ]);
-      expect(B).to.deep.equal([ [ 0, 0 ], [ 0, 1 ] ]);
+      expect(A).to.deep.equal([[0, 0.75], [0.3333333333333333, 0.8333333333333334]]);
+      expect(B).to.deep.equal([[0, 0], [0, 1]]);
     });
   });
 
@@ -99,7 +99,7 @@ describe('frechet', () => {
 
     it('returns array of intersection between A and B with constant on x', () => {
       expect(frechet.distances([[0, 1], [0, 1]], [[0, 0], [0, 1]]))
-        .to.deep.equal([1, 0]);
+        .to.deep.equal([0, 0]);
     });
   });
 

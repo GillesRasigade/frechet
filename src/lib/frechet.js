@@ -94,7 +94,20 @@ function distances(A, B) {
   const len = A.length;
 
   for (let i = 0; i < len; i++) {
-    distances.push(d(A[i], B[i]));
+    let di = null;
+    for (let j = 0; j < len; j++) {
+      const dij = d(A[i], B[j]);
+      if (di === null || di > dij) {
+        di = dij;
+
+        if (di === 0) {
+          // no better candidate
+          break;
+        }
+      }
+    }
+
+    distances.push(di);
   }
 
   return distances;
