@@ -20,7 +20,7 @@ describe('functional', () => {
       const { A, B } = frechet.timeNormalize(cos, sin, 0.1);
       const d = frechet.max(A, B);
 
-      expect(d).to.equal(1.403062851541114); // ~ sqrt(1+1);
+      expect(d).to.equal(1.4030628515417114); // ~ sqrt(1+1);
     });
   });
 });
