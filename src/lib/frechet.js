@@ -125,6 +125,17 @@ function min(A, B) {
 }
 
 /**
+ * Returns the maximal value of distances between points, exact Fréchet distance.
+ *
+ * @param {array} A [...[x, y]] positions array
+ * @param {array} B [...[x, y]] positions array
+ * @returns {array}
+ */
+function max(A, B) {
+  return Math.max(...distances(A, B));
+}
+
+/**
  * Returns the mean value of distances between points.
  *
  * @param {array} A [...[x, y]] positions array
@@ -139,6 +150,7 @@ module.exports = {
   distances,
   min,
   mean,
+  max,
 
   timeNormalize,
 
